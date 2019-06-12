@@ -178,20 +178,32 @@ body {
 .section-middle {
     max-width: 86%;
     margin: 0 auto;
+    height: 2500px;
 }
 
 .content-navigation {
     .content-navigation__menu {
         padding: 0;
-        margin: 0;
+        margin: 48px 0 0 0;
         list-style: none;
         display: flex;
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
+        &.fixed {
+            position: fixed;
+        }
         & > .menu__item {
             padding: 5px;
             text-align: center;
             font-size: 66px;
+            opacity: 1;
+            &.deactive {
+                opacity: .3;
+            }
+
+            & * {
+                margin: 0;
+            } 
         }
     }
 }
