@@ -1,4 +1,3 @@
-import 'scrollmagic';
 import '../style/style.less';
 
 var state = {

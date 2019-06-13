@@ -182,6 +182,14 @@ body {
 }
 
 .content-navigation {
+    &.fixed.outside {
+       margin-top: 170px;
+        .content-navigation__menu {
+            position: fixed;
+            top: 0;
+            width: 86%;
+        }
+    }
     .content-navigation__menu {
         padding: 0;
         margin: 48px 0 0 0;
@@ -189,9 +197,6 @@ body {
         display: flex;
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
-        &.fixed {
-            position: fixed;
-        }
         & > .menu__item {
             padding: 5px;
             text-align: center;
@@ -206,4 +211,8 @@ body {
             } 
         }
     }
+}
+
+.divider {
+    height: 800px;
 }
