@@ -81,7 +81,27 @@
 						<li class="menu__item"><h2>Launch.</h2></li>
 					</ul>
                     <div id="trigger" class="spacer s0"></div>
+                    <div class="divider divider_s"></div>
+                    <div id="trigger6"></div>
+                    <div id="trigger8"></div>
+                    <div class="section-middle__content">
+                            <div class="monitor"></div>
+                            <div class="monitor_ghost"></div>
+                            <div class="content-description">
+                                <h2>Licht terrazzo basis</h2>
+                                <ul>
+                                    <li>Licht terrazzo basis met witte blaadjes</li>
+                                    <li>Licht terrazzo basis met witte blaadjes</li>
+                                    <li>Licht terrazzo basis met witte blaadjes</li>
+                                </ul>
+                            </div>
+                            <div id="trigger7"></div>
+                            <div class="content content_1"></div>
+                    </div>
                     <div class="divider"></div>
+
+
+
                     <div id="trigger2" class="spacer s0"></div>
                     <div class="divider"></div>
                     <div id="trigger3" class="spacer s0"></div>
@@ -152,6 +172,53 @@
 							.setTween(tween5)
 							.addIndicators() // add indicators (requires plugin)
                             .addTo(controller)
+                        
+
+                        
+                        var scene6 = new ScrollMagic.Scene({
+							triggerElement: '#trigger6',
+							duration: 150,
+							loglevel: 3,
+							triggerHook: 0.5,
+						})
+							.addIndicators() // add indicators (requires plugin)
+                            .addTo(controller)
+                            .on("start end", function (e) {
+                                $(".monitor").addClass(e.type == "end" && "fixed");
+                                $(".monitor").removeClass(e.type == "start" && "fixed");
+                            })
+                            .on("enter leave", function (e) {
+                                $(".monitor").addClass(e.type == "leave" && "outside");
+                                $(".monitor").removeClass(e.type == "enter" && "outside");
+
+                            })
+                        var scene7 = new ScrollMagic.Scene({triggerElement: '#trigger7', duration: 1000 })
+                                        .addTo(controller)
+                                        .addIndicators() // add indicators (requires plugin)
+                                        .on("progress", function (e) {
+                                            $(".content_1").css('bottom',  (-500 + e.progress.toFixed(3) * 1000) + 'px');
+                                        });
+
+                        var scene8 = new ScrollMagic.Scene({
+							triggerElement: '#trigger8',
+							duration: 420,
+							loglevel: 3,
+							triggerHook: 0.5,
+						})
+							.addIndicators() // add indicators (requires plugin)
+                            .addTo(controller)
+                            .on("start end", function (e) {
+                                $(".content-description").addClass(e.type == "end" && "fixed");
+                                $(".content-description").removeClass(e.type == "start" && "fixed");
+                            })
+                            .on("enter leave", function (e) {
+                                $(".content-description").addClass(e.type == "leave" && "outside");
+                                $(".content-description").removeClass(e.type == "enter" && "outside");
+
+                            })
+                            .on("progress", function (e) {
+                                $(".content-description").css('bottom',  (-1000 + e.progress.toFixed(3) * 135) + 'px');
+                            });
 					</script>
 				</div>
 			</section>
