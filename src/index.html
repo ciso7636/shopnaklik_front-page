@@ -190,14 +190,17 @@
                             .on("enter leave", function (e) {
                                 $(".monitor").addClass(e.type == "leave" && "outside");
                                 $(".monitor").removeClass(e.type == "enter" && "outside");
-
                             })
                         var scene7 = new ScrollMagic.Scene({triggerElement: '#trigger7', duration: 1000 })
                                         .addTo(controller)
                                         .addIndicators() // add indicators (requires plugin)
                                         .on("progress", function (e) {
-                                            $(".content_1").css('bottom',  (-500 + e.progress.toFixed(3) * 1000) + 'px');
-                                        });
+                                            $(".content_1").css('bottom',  (-500 + e.progress.toFixed(3) * 1200) + 'px');
+                                        })
+										.on("enter leave", function (e) {
+											$(".content_1").addClass(e.type == "leave" && "hidden");
+											$(".content_1").removeClass(e.type == "enter" && "hidden");
+										})
 
                         var scene8 = new ScrollMagic.Scene({
 							triggerElement: '#trigger8',
