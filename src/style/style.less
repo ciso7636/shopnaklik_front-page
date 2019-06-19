@@ -216,7 +216,7 @@ body {
 .divider {
     height: 800px;
     &.divider_s {
-        height: 240px;
+        height: 26px;
     }
 }
 
@@ -224,7 +224,10 @@ body {
 .section-middle__content {
     width: 640px;
     margin: 0 auto;
-    .monitor {
+    padding-top: 240px; 
+    .monitor,
+    .monitor2,
+    .monitor3 {
         margin: 0 auto;
         width: 640px;
         height: 440px;
@@ -239,9 +242,18 @@ body {
                 height: 448px;
             }
         }
+
+        .monitor__content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
     }
     
-    .content {
+    .content,
+    .content2,
+    .content3 {
         width: 620px;
         height: 440px;
         background-color: orange; 
@@ -256,7 +268,9 @@ body {
             }
     }
 
-    .content-description {
+    .content-description,
+    .content2-description,
+    .content3-description {
         position: absolute;
         padding-left: 40px; 
         left: 0;
@@ -264,6 +278,13 @@ body {
         &.fixed.outside {
             position: fixed;
             top: 232px;
+        }
+        &.hidden {
+            position: absolute;
+            top: auto;
+            bottom: 0 !important;
+            left: -300px;
+            width: 200px;
         }
         
         ul {
@@ -276,3 +297,32 @@ body {
     }
 }
 
+
+#pinContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-perspective: 1000;
+            perspective: 1000;
+}
+#slideContainer {
+    width: 400%; /* to contain 4 panels, each with 100% of window width */
+    height: 100%;
+}
+.panel {
+    height: 100%;
+    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+    float: left;
+    &.blue {
+        background-color: blue;
+    }
+    &.turqoise {
+        background-color: violet;
+    }
+    &.green {
+        background-color: green;
+    }
+    &.bordeaux {
+        background-color: orange;
+    }
+}
