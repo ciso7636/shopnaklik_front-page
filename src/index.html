@@ -184,10 +184,30 @@
                             </ul>
                         </div>
                     </div>
-                    <div id='triger_form'></div>
-                    <div class="form">
-                        <input type='text' name='name' id='name'>
-                        <input type='text2' name='name2' id='name2'>
+                    <div id='triger_setHeight'></div>
+                    <div class="content-form">
+                        <div class="monitor4">
+                            <div id="pinContainer">
+                                <div id="slideContainer">
+                                    <section class="panel blue">
+                                        <b>ONE</b>
+                                    </section>
+                                    <section class="panel turqoise">
+                                        <b>TWO</b>
+                                    </section>
+                                    <section class="panel green">
+                                        <b>THREE</b>
+                                    </section>
+                                    <section class="panel bordeaux">
+                                        <b>FOUR</b>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form">
+                            <input type='text' name='name' id='name'>
+                            <input type='text2' name='name2' id='name2'>
+                        </div>
                     </div>
                     <div class="divider"></div>
                     <div class="divider"></div>
@@ -385,7 +405,7 @@
                                 .addTo(controller);
 
 
-
+                            var topMonitor, leftMonitor, widthMonitor;
 
                             var scene10 = new ScrollMagic.Scene({
                                 triggerElement: "#triger3_design_monitor",
@@ -398,21 +418,10 @@
                                 .on("enter leave", function (e) {
                                     $(".content3-description").addClass(e.type == "leave" && "hidden");
                                     $(".content3-description").removeClass(e.type == "enter" && "hidden");
-
-                                })
-                                .on("start end", function (e) {
-                                    if (e.type == "end") {
-                                        var top = document.querySelector('.monitor3').getBoundingClientRect().top;
-                                        var left = document.querySelector('.monitor3').getBoundingClientRect().top;
-                                        var width = document.querySelector('.monitor3').offsetWidth;
-
-                                        $('.monitor3').css({
-                                            'position': 'fixed',
-                                            'top': top,
-                                            'width': width,
-                                            'left': 'auto',
-                                        })
-                                    }
+                                    $('.monitor3').addClass(e.type == "leave" && "hidden");
+                                    $('.monitor4').addClass(e.type == "enter" && "hidden");
+                                    $('.monitor3').removeClass(e.type == "enter" && "hidden");
+                                    $('.monitor4').removeClass(e.type == "leave" && "hidden");
                                 })
 
                             var scene11 = new ScrollMagic.Scene({
@@ -465,14 +474,38 @@
 
 
                             var scene12 = new ScrollMagic.Scene({
-                                triggerElement: "#triger_form",
-                                duration: 450, 
+                                triggerElement: "#triger_setHeight",
+                                duration: 5, 
                                 triggerHook: 1
                             })
-                                .setPin(".form")
-                                .addIndicators({name: "Form"}) // add indicators (requires plugin)
+                                .addIndicators({name: "setHeight Monitor"}) // add indicators (requires plugin)
                                 .addTo(controller)
+                                .on("start end", function (e) {
+                                    if (e.type == "start") {
+                                        topMonitor = document.querySelector('.monitor3').getBoundingClientRect().top;
+                                        leftMonitor = document.querySelector('.monitor3').getBoundingClientRect().left;
+                                        widthMonitor = document.querySelector('.monitor3').offsetWidth;
+                                    }
+                                })
 
+                            // build tween
+                            var tween = TweenMax.staggerFromTo(".monitor4", 2, {left: '50%', margin: '0 0 0 -320px'}, {left: 0, margin: 0, ease: Back.easeOut}, 0.15);
+
+                            // build scene
+                            var scene13 = new ScrollMagic.Scene({triggerElement: "#triger_setHeight", duration: 300})
+                                .setTween(tween)
+                                .addIndicators({name: "monitor4"}) // add indicators (requires plugin)
+                                .addTo(controller);
+
+                            var scene14 = new ScrollMagic.Scene({
+                                triggerElement: "#triger_setHeight", 
+                                duration: 600,
+                                triggerHook: 0.4
+                            })
+                                .setPin(".form")
+                                .addIndicators({name: "form"}) // add indicators (requires plugin)
+                                .addTo(controller);
+                               
 					</script>
 				</div>
 			</section>
