@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <div class="content-description">
-                            <h2>Licht terrazzo basis</h2>
+                            <h2>Licht terrazzo basis1</h2>
                             <ul>
                                 <li>Licht terrazzo basis met witte blaadjes</li>
                                 <li>Licht terrazzo basis met witte blaadjes</li>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class="content2-description">
-                            <h2>Licht terrazzo basis</h2>
+                            <h2>Licht terrazzo basis2</h2>
                             <ul>
                                 <li>Licht terrazzo basis met witte blaadjes</li>
                                 <li>Licht terrazzo basis met witte blaadjes</li>
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                         <div class="content3-description">
-                            <h2>Licht terrazzo basis</h2>
+                            <h2>Licht terrazzo basis3</h2>
                             <ul>
                                 <li>Licht terrazzo basis met witte blaadjes</li>
                                 <li>Licht terrazzo basis met witte blaadjes</li>
@@ -189,15 +189,6 @@
                         <div class="monitor4">
                             <div id="pinContainer">
                                 <div id="slideContainer">
-                                    <section class="panel blue">
-                                        <b>ONE</b>
-                                    </section>
-                                    <section class="panel turqoise">
-                                        <b>TWO</b>
-                                    </section>
-                                    <section class="panel green">
-                                        <b>THREE</b>
-                                    </section>
                                     <section class="panel bordeaux">
                                         <b>FOUR</b>
                                     </section>
@@ -209,8 +200,19 @@
                             <input type='text2' name='name2' id='name2'>
                         </div>
                     </div>
-                    <div class="divider"></div>
-                    <div class="divider"></div>
+                    <footer>
+                        <ul>
+                            <li>
+                                Text
+                            </li>
+                            <li>
+                                Text
+                            </li>
+                            <li>
+                                Text
+                            </li>
+                        </ul>
+                    </footer>
 
 					<script>
 						var controller = new ScrollMagic.Controller({ loglevel: 3 });
@@ -281,6 +283,9 @@
 							.addIndicators({name: "3 Design.Build.Launch."}) // add indicators (requires plugin)
                             .addTo(controller)
 
+
+
+                        var bottomPositionDescription;
                         var scene6 = new ScrollMagic.Scene({
                             triggerElement: "#triger_design_monitor",
                             duration:'550%', 
@@ -290,9 +295,24 @@
                             .addIndicators({name: "Design Monitor"}) // add indicators (requires plugin)
                             .addTo(controller)
                             .on("enter leave", function (e) {
-                                $(".content-description").addClass(e.type == "leave" && "hidden");
-                                $(".content-description").removeClass(e.type == "enter" && "hidden");
 
+                                if (e.type == "enter") {
+                                    $(".container").css('position', 'static');
+                                    $(".content-description").css({
+                                        position: 'fixed',
+                                        top: '232px',
+                                        bottom: bottomPositionDescription,
+                                    })
+                                }
+
+                                else if (e.type == "leave") {
+                                    $(".container").css('position', 'static');
+                                    $(".content-description").css({
+                                        position: 'absolute',
+                                        bottom: 'auto',
+                                        top: $('.content-description').offset().top
+                                    })
+                                }
                             })
                         
                         var scene7 = new ScrollMagic.Scene({
@@ -310,6 +330,8 @@
                             .on("enter leave", function (e) {
                                 $(".content-description").addClass(e.type == "leave" && "outside");
                                 $(".content-description").removeClass(e.type == "enter" && "outside");
+
+                                bottomPositionDescription = $(".content-description").css('bottom');
 
                             })
                             .on("progress", function (e) {
@@ -343,7 +365,7 @@
 
 
 
-
+                            var bottomPositionDescription2;
                             var scene8 = new ScrollMagic.Scene({
                                 triggerElement: "#triger2_design_monitor",
                                 duration:'550%', 
@@ -353,9 +375,24 @@
                                 .addIndicators({name: "Build Monitor"}) // add indicators (requires plugin)
                                 .addTo(controller)
                                 .on("enter leave", function (e) {
-                                    $(".content2-description").addClass(e.type == "leave" && "hidden");
-                                    $(".content2-description").removeClass(e.type == "enter" && "hidden");
 
+                                    if (e.type == "enter") {
+                                        $(".container").css('position', 'static');
+                                        $(".content2-description").css({
+                                            position: 'fixed',
+                                            top: '232px',
+                                            bottom: bottomPositionDescription2,
+                                        })
+                                    }
+
+                                    else if (e.type == "leave") {
+                                        $(".container").css('position', 'static');
+                                        $(".content2-description").css({
+                                            position: 'absolute',
+                                            bottom: 'auto',
+                                            top: $('.content2-description').offset().top
+                                        })
+                                    }
                                 })
 
                             var scene9 = new ScrollMagic.Scene({
@@ -373,6 +410,8 @@
                                 .on("enter leave", function (e) {
                                     $(".content2-description").addClass(e.type == "leave" && "outside");
                                     $(".content2-description").removeClass(e.type == "enter" && "outside");
+
+                                    bottomPositionDescription2 = $(".content2-description").css('bottom');
 
                                 })
                                 .on("progress", function (e) {
@@ -405,8 +444,9 @@
                                 .addTo(controller);
 
 
-                            var topMonitor, leftMonitor, widthMonitor;
 
+
+                            var topMonitor, leftMonitor, widthMonitor;
                             var scene10 = new ScrollMagic.Scene({
                                 triggerElement: "#triger3_design_monitor",
                                 duration:'550%', 
@@ -416,12 +456,16 @@
                                 .addIndicators({name: "Launch Monitor"}) // add indicators (requires plugin)
                                 .addTo(controller)
                                 .on("enter leave", function (e) {
-                                    $(".content3-description").addClass(e.type == "leave" && "hidden");
-                                    $(".content3-description").removeClass(e.type == "enter" && "hidden");
-                                    $('.monitor3').addClass(e.type == "leave" && "hidden");
-                                    $('.monitor4').addClass(e.type == "enter" && "hidden");
-                                    $('.monitor3').removeClass(e.type == "enter" && "hidden");
-                                    $('.monitor4').removeClass(e.type == "leave" && "hidden");
+                                    $('.monitor3').addClass(e.type == "leave" && "leave");
+                                    $('.monitor4').addClass(e.type == "leave" && "leave");
+                                    $('.monitor3').removeClass(e.type == "enter" && "leave");
+                                    $('.monitor4').removeClass(e.type == "enter" && "leave");
+                                })
+                                .on("start end", function (e) {
+                                    $('.monitor3').addClass(e.type == "start" && "start");
+                                    $('.monitor4').addClass(e.type == "start" && "start");
+                                    $('.monitor3').removeClass(e.type == "end" && "start");
+                                    $('.monitor4').removeClass(e.type == "end" && "start");
                                 })
 
                             var scene11 = new ScrollMagic.Scene({
@@ -439,7 +483,6 @@
                                 .on("enter leave", function (e) {
                                     $(".content3-description").addClass(e.type == "leave" && "outside");
                                     $(".content3-description").removeClass(e.type == "enter" && "outside");
-
                                 })
                                 .on("progress", function (e) {
                                     $(".content3-description").css('bottom',  (-10900 + e.progress.toFixed(3) * 135) + 'px');
@@ -489,22 +532,77 @@
                                 })
 
                             // build tween
-                            var tween = TweenMax.staggerFromTo(".monitor4", 2, {left: '50%', margin: '0 0 0 -320px'}, {left: 0, margin: 0, ease: Back.easeOut}, 0.15);
+                            //var tween13 = TweenMax.staggerFromTo(".monitor4", 2, {left: '50%', margin: '0 0 0 -320px'}, {left: 0, margin: 0, ease: Back.easeOut}, 0.15);
 
                             // build scene
-                            var scene13 = new ScrollMagic.Scene({triggerElement: "#triger_setHeight", duration: 300})
-                                .setTween(tween)
-                                .addIndicators({name: "monitor4"}) // add indicators (requires plugin)
-                                .addTo(controller);
 
-                            var scene14 = new ScrollMagic.Scene({
-                                triggerElement: "#triger_setHeight", 
-                                duration: 600,
-                                triggerHook: 0.4
-                            })
-                                .setPin(".form")
-                                .addIndicators({name: "form"}) // add indicators (requires plugin)
-                                .addTo(controller);
+                            var isScrolling;
+
+                            // Listen for scroll events
+                            window.addEventListener('scroll', function ( event ) {
+
+                                // Clear our timeout throughout the scroll
+                                window.clearTimeout( isScrolling );
+
+                                // Set a timeout to run after scrolling ends
+                                isScrolling = setTimeout(function() {
+
+                                    scrollFunction();
+
+                                }, 66);
+
+                            }, false);
+
+                            function scrollFunction() {
+
+                                var scrollTop = $('.content-form').offset().top - $(window).scrollTop();
+                                var percentScrollTopOfWindow = scrollTop / $(window).height() * 100;
+
+                                if (percentScrollTopOfWindow < 30 && scrollTop >= 0) {
+                                        $('html, body').animate({
+                                            scrollTop: $('.content-form').offset().top
+                                        }, 100);
+                                } else if (scrollTop > -150 && scrollTop <= 0) {
+                                    $('html, body').animate({
+                                        scrollTop: $('.content-form').offset().top
+                                    }, 100);
+                                }
+                            }
+
+                            var scene13 = new ScrollMagic.Scene({triggerElement: "#triger_setHeight", triggerHook: 0.3})
+                                .addTo(controller)
+                                .addIndicators({name: "monitor4"}) // add indicators (requires plugin)
+                                .on("enter leave", function (e) {
+                                    $(".monitor4").addClass(e.type == "enter" && "left");
+                                    $(".form").addClass(e.type == "enter" && "top");
+                                    $(".monitor4").removeClass(e.type == "leave" && "left");
+                                    $(".form").removeClass(e.type == "leave" && "top");
+
+                                    if (e.type == "enter") {
+                                        $('.content-navigation__menu').css('opacity', 0);
+                                        $('.content3-description').css('opacity', 0);
+                                    } else if (e.type == "leave") {
+                                        $('.content-navigation__menu').css('opacity', 1);
+                                        $('.content3-description').css('opacity', 1);
+                                    }
+                                })
+
+                                .on("start end", function (e) {
+                                    $(".monitor4").addClass(e.type == "end" && "fixed");
+                                    $(".monitor4").removeClass(e.type == "start" && "fixed");
+                                })
+
+                            var scene14 = new ScrollMagic.Scene({triggerElement: "#triger_setHeight", triggerHook: 0})
+                                .addTo(controller)
+                                .on("enter leave", function (e) {
+                                    $(".monitor4").addClass(e.type == "enter" && "absolute");
+                                    $(".monitor4").removeClass(e.type == "leave" && "absolute");
+                                })
+                                
+                                .on("start end", function (e) {
+                                    $(".monitor4").addClass(e.type == "end" && "fixed");
+                                    $(".monitor4").removeClass(e.type == "start" && "fixed");
+                                })
                                
 					</script>
 				</div>

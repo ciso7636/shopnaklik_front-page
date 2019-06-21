@@ -176,7 +176,7 @@ body {
 }
 
 .section-middle {
-    max-width: 86%;
+    max-width: 100%;
     margin: 0 auto;
     height: 2500px;
 }
@@ -185,9 +185,14 @@ body {
     &.fixed.outside {
        margin-top: 170px;
         .content-navigation__menu {
+            -webkit-transition: all linear 0.25s;
+            -moz-transition: all linear 0.25s;
+            -o-transition: all linear 0.25s;
+            transition: all linear 0.25s;
             position: fixed;
             top: 0;
-            width: 86%;
+            width: 100%;
+            opacity: 1;
         }
     }
     .content-navigation__menu {
@@ -207,7 +212,7 @@ body {
             }
 
             & * {
-                margin: 0;
+                margin: 0;  
             } 
         }
     }
@@ -221,10 +226,25 @@ body {
 }
 
 .content-form {
-position: relative;
+    position: relative;
+    height: 764px;
+}
+
+.form {
+    width: 632px;
+    height: 760px;
+    float: right;
+    background-color: silver;
+    border: 4px solid black;
+    -webkit-transition: all linear 0.45s;
+    -moz-transition: all linear 0.45s;
+    -o-transition: all linear 0.45s;
+    transition: all linear 0.45s;
 }
 
 .monitor4 {
+    z-index: -1;
+    display: none;
     margin: 0 auto;
     width: 632px;
     height: 432px;
@@ -232,8 +252,11 @@ position: relative;
     border: 4px solid black;
     position: fixed;
     bottom: 60px;
-    left: 50%;
-    margin-left: -320px;
+    left: calc(50% - 320px);
+    -webkit-transition: left linear 0.45s;
+    -moz-transition: left linear 0.45s;
+    -o-transition: left linear 0.45s;
+    transition: left linear 0.45s;
     &.fixed.outside {
         position: fixed;
         top: 232px;
@@ -243,8 +266,18 @@ position: relative;
             height: 448px;
         }
     }
-    &.hidden {
-        display: none;
+    &.leave {
+        display: block;
+        &.start {
+            display: none;
+        }
+    }
+    &.left {
+        left: 0;
+        margin-left: 0;
+    }
+    &.absolute {
+        position: absolute;
     }
 
     .monitor__content {
@@ -279,6 +312,12 @@ position: relative;
         &.hidden {
             display: none;
         }
+        &.leave {
+            display: none;
+            &.start {
+                display: block;
+            }
+        }
 
         .monitor__content {
             position: relative;
@@ -311,7 +350,7 @@ position: relative;
         position: absolute;
         padding-left: 40px; 
         left: 0;
-        bottom: -1000px;
+        bottom: -11000px;
         &.fixed.outside {
             position: fixed;
             top: 232px;
@@ -333,7 +372,6 @@ position: relative;
         }
     }
 }
-
 
 #pinContainer {
     width: 100%;
@@ -362,4 +400,9 @@ position: relative;
     &.bordeaux {
         background-color: orange;
     }
+}
+
+footer {
+    padding: 48px 12px;
+    background: #f9f1f1;
 }
