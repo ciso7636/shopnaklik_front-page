@@ -1,84 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet" />
-		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-		<title>shopnaklik</title>
-	</head>
+        <title>shopnaklik</title>
+    </head>
 
-	<body>
-		<div class="container">
-			<section class="section-top">
-				<div class="section-top__text">
-					<div class="title">
-						<h1>Title</h1>
-					</div>
-					<div class="description">
-						<p>Everything you need to start, run and grow your online store</p>
-					</div>
-				</div>
+    <body>
+        <header>
+            <a href="/" class="logo"><img src="/img/logo.png" alt="logo"></a>
+        </header>
+        <div class="container">
+            <section class="section-top">
+                <div class="section-top__text">
+                    <div class="text-title">
+                        <h1>Sell online with Shopnaklik</h1>
+                    </div>
+                    <div class="text-description">
+                        <p>Everything you need to start, run and grow your online store</p>
+                    </div>
+                </div>
+                <div class="section-top__picture">
+                    <figure class="product-figure product-figure--cover">
+                        <img
+                            class="visible"
+                            src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
+                        />
+                    </figure>
+                </div>
+                <svg class="section-top__crop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48">
+                    <path fill="#FFF" fill-rule="evenodd" d="M0 0c194.22 23.31 345.236 37.383 453.045 42.218C539.007 46.073 627.992 48 720 48c265.097 0 505.097-16 720-48v48H0V0z"></path>
+                </svg>
+            </section>
+            
 
-				<div class="round-wrapper">
-					<div class="round-slider">
-						<div class="selection" style="">
-							<div class="item"></div>
-						</div>
-					</div>
-				</div>
-				<figure class="product-figure product-figure--cover">
-					<img
-						class="visible"
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-					<img
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-					<img
-						src="//cdn.shopify.com/s/files/1/0035/5067/5057/products/1179_678b4f9c-2e77-4755-bbb0-8ba51ed6dd01_1800x.jpg?v=1542375875"
-					/>
-					<img
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-					<img
-						src="//cdn.shopify.com/s/files/1/0035/5067/5057/products/1179_678b4f9c-2e77-4755-bbb0-8ba51ed6dd01_1800x.jpg?v=1542375875"
-					/>
-					<img
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-					<img
-						src="//cdn.shopify.com/s/files/1/0035/5067/5057/products/1179_678b4f9c-2e77-4755-bbb0-8ba51ed6dd01_1800x.jpg?v=1542375875"
-					/>
-					<img
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-					<img
-						src="//cdn.shopify.com/s/files/1/0035/5067/5057/products/1179_678b4f9c-2e77-4755-bbb0-8ba51ed6dd01_1800x.jpg?v=1542375875"
-					/>
-					<img
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-					<img
-						src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-					/>
-				</figure>
-			</section>
-			<section class="section-middle">
-				<div class="content-navigation">
-					<ul class="content-navigation__menu">
-						<li class="menu__item"><h2>Design.</h2></li>
-						<li class="menu__item"><h2>Build.</h2></li>
-						<li class="menu__item"><h2>Launch.</h2></li>
+            <section class="section-middle">
+                <div class="content-navigation">
+                    <ul class="content-navigation__menu">
+                        <li class="menu__item"><h2>Design.</h2></li>
+                        <li class="menu__item"><h2>Build.</h2></li>
+                        <li class="menu__item"><h2>Launch.</h2></li>
                     </ul>
                     
                     <div id="trigger_Design_Build_Launch" class="spacer s0"></div>
@@ -213,400 +185,8 @@
                             </li>
                         </ul>
                     </footer>
-
-					<script>
-						var controller = new ScrollMagic.Controller({ loglevel: 3 });
-
-						// build tween
-						var tween = TweenMax.to('.menu__item:nth-child(2), .menu__item:nth-child(3)', 0.5, { opacity: '.1' });
-						var tween2 = TweenMax.to('.menu__item:nth-child(2)', 0.5, { opacity: '1' });
-                        var tween3 = TweenMax.to('.menu__item:nth-child(1)', 0.5, { opacity: '.1' });
-                        var tween4 = TweenMax.to('.menu__item:nth-child(3)', 0.5, { opacity: '1' });
-						var tween5 = TweenMax.to('.menu__item:nth-child(2)', 0.5, { opacity: '.1' });
-						// build scene
-						var scene = new ScrollMagic.Scene({
-							triggerElement: '#trigger_Design_Build_Launch',
-							duration: 212,
-							loglevel: 3,
-							triggerHook: 0.5,
-						})
-							.setTween(tween)
-							.addIndicators({name: "1 Design.Build.Launch."}) // add indicators (requires plugin)
-                            .addTo(controller)
-                            .on("start end", function (e) {
-                                $(".content-navigation").addClass(e.type == "end" && "fixed");
-                                $(".content-navigation").removeClass(e.type == "start" && "fixed");
-                            })
-                            .on("enter leave", function (e) {
-                                $(".content-navigation").addClass(e.type == "leave" && "outside");
-                                $(".content-navigation").removeClass(e.type == "enter" && "outside");
-
-                            })
-
-                        var scene2 = new ScrollMagic.Scene({
-							triggerElement: '#trigger2_Design_Build_Launch',
-							duration: 100,
-							loglevel: 3,
-							triggerHook: 0.5,
-						})
-							.setTween(tween2)
-							.addIndicators({name: "2 Design.Build.Launch."}) // add indicators (requires plugin)
-                            .addTo(controller)
-
-                        var scene3 = new ScrollMagic.Scene({
-							triggerElement: '#trigger2_Design_Build_Launch',
-							duration: 100,
-							loglevel: 3,
-							triggerHook: 0.5,
-						})
-							.setTween(tween3)
-							.addIndicators({name: "2 Design.Build.Launch."}) // add indicators (requires plugin)
-                            .addTo(controller)
-
-                        var scene4 = new ScrollMagic.Scene({
-							triggerElement: '#trigger3_Design_Build_Launch',
-							duration: 100,
-							loglevel: 3,
-							triggerHook: 0.5,
-						})
-							.setTween(tween4)
-							.addIndicators({name: "3 Design.Build.Launch."}) // add indicators (requires plugin)
-                            .addTo(controller)
-
-                        var scene5 = new ScrollMagic.Scene({
-							triggerElement: '#trigger3_Design_Build_Launch',
-							duration: 100,
-							loglevel: 3,
-							triggerHook: 0.5,
-						})
-							.setTween(tween5)
-							.addIndicators({name: "3 Design.Build.Launch."}) // add indicators (requires plugin)
-                            .addTo(controller)
-
-
-
-                        var bottomPositionDescription;
-                        var scene6 = new ScrollMagic.Scene({
-                            triggerElement: "#triger_design_monitor",
-                            duration:'550%', 
-                            triggerHook: 0
-                        })
-                            .setPin(".monitor")
-                            .addIndicators({name: "Design Monitor"}) // add indicators (requires plugin)
-                            .addTo(controller)
-                            .on("enter leave", function (e) {
-
-                                if (e.type == "enter") {
-                                    $(".container").css('position', 'static');
-                                    $(".content-description").css({
-                                        position: 'fixed',
-                                        top: '232px',
-                                        bottom: bottomPositionDescription,
-                                    })
-                                }
-
-                                else if (e.type == "leave") {
-                                    $(".container").css('position', 'static');
-                                    $(".content-description").css({
-                                        position: 'absolute',
-                                        bottom: 'auto',
-                                        top: $('.content-description').offset().top
-                                    })
-                                }
-                            })
-                        
-                        var scene7 = new ScrollMagic.Scene({
-							triggerElement: '#trigger_design_description',
-							duration: 460,
-							loglevel: 3,
-							triggerHook: 0.3,
-						})
-							.addIndicators({name: "Design Description"}) // add indicators (requires plugin)
-                            .addTo(controller)
-                            .on("start end", function (e) {
-                                $(".content-description").addClass(e.type == "end" && "fixed");
-                                $(".content-description").removeClass(e.type == "start" && "fixed");
-                            })
-                            .on("enter leave", function (e) {
-                                $(".content-description").addClass(e.type == "leave" && "outside");
-                                $(".content-description").removeClass(e.type == "enter" && "outside");
-
-                                bottomPositionDescription = $(".content-description").css('bottom');
-
-                            })
-                            .on("progress", function (e) {
-                                $(".content-description").css('bottom',  (-1000 + e.progress.toFixed(3) * 135) + 'px');
-                            });
-
-                            // define movement of panels
-                            var wipeAnimation = new TimelineMax()
-                                // animate to second panel
-                                .to("#slideContainer", 0.5, {z: -150})		// move back in 3D space
-                                .to("#slideContainer", 1,   {x: "-25%"})	// move in to first panel
-                                .to("#slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
-                                // animate to third panel
-                                .to("#slideContainer", 0.5, {z: -150, delay: 1})
-                                .to("#slideContainer", 1,   {x: "-50%"})
-                                .to("#slideContainer", 0.5, {z: 0})
-                                // animate to forth panel
-                                .to("#slideContainer", 0.5, {z: -150, delay: 1})
-                                .to("#slideContainer", 1,   {x: "-75%"})
-                                .to("#slideContainer", 0.5, {z: 0});
-                            // create scene to pin and link animation
-                            new ScrollMagic.Scene({
-                                    triggerElement: ".monitor",
-                                    triggerHook: "onLeave",
-                                    duration: "500%",
-                                    triggerHook: 0,
-                                })
-                                .setTween(wipeAnimation)
-                                .addIndicators({name: "Monitor Content"}) // add indicators (requires plugin)
-                                .addTo(controller);
-
-
-
-                            var bottomPositionDescription2;
-                            var scene8 = new ScrollMagic.Scene({
-                                triggerElement: "#triger2_design_monitor",
-                                duration:'550%', 
-                                triggerHook: 0
-                            })
-                                .setPin(".monitor2")
-                                .addIndicators({name: "Build Monitor"}) // add indicators (requires plugin)
-                                .addTo(controller)
-                                .on("enter leave", function (e) {
-
-                                    if (e.type == "enter") {
-                                        $(".container").css('position', 'static');
-                                        $(".content2-description").css({
-                                            position: 'fixed',
-                                            top: '232px',
-                                            bottom: bottomPositionDescription2,
-                                        })
-                                    }
-
-                                    else if (e.type == "leave") {
-                                        $(".container").css('position', 'static');
-                                        $(".content2-description").css({
-                                            position: 'absolute',
-                                            bottom: 'auto',
-                                            top: $('.content2-description').offset().top
-                                        })
-                                    }
-                                })
-
-                            var scene9 = new ScrollMagic.Scene({
-                                triggerElement: '#trigger2_design_description',
-                                duration: 460,
-                                loglevel: 3,
-                                triggerHook: 0.3,
-                            })
-                                .addIndicators({name: "Build Description"}) // add indicators (requires plugin)
-                                .addTo(controller)
-                                .on("start end", function (e) {
-                                    $(".content2-description").addClass(e.type == "end" && "fixed");
-                                    $(".content2-description").removeClass(e.type == "start" && "fixed");
-                                })
-                                .on("enter leave", function (e) {
-                                    $(".content2-description").addClass(e.type == "leave" && "outside");
-                                    $(".content2-description").removeClass(e.type == "enter" && "outside");
-
-                                    bottomPositionDescription2 = $(".content2-description").css('bottom');
-
-                                })
-                                .on("progress", function (e) {
-                                    $(".content2-description").css('bottom',  (-5950 + e.progress.toFixed(3) * 135) + 'px');
-                                });
-                            
-                            // define movement of panels
-                            var wipeAnimation2 = new TimelineMax()
-                                // animate to second panel
-                                .to(".monitor2 #slideContainer", 0.5, {z: -150})		// move back in 3D space
-                                .to(".monitor2 #slideContainer", 1,   {x: "-25%"})	// move in to first panel
-                                .to(".monitor2 #slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
-                                // animate to third panel
-                                .to(".monitor2 #slideContainer", 0.5, {z: -150, delay: 1})
-                                .to(".monitor2 #slideContainer", 1,   {x: "-50%"})
-                                .to(".monitor2 #slideContainer", 0.5, {z: 0})
-                                // animate to forth panel
-                                .to(".monitor2 #slideContainer", 0.5, {z: -150, delay: 1})
-                                .to(".monitor2 #slideContainer", 1,   {x: "-75%"})
-                                .to(".monitor2 #slideContainer", 0.5, {z: 0});
-                            // create scene to pin and link animation
-                            new ScrollMagic.Scene({
-                                    triggerElement: ".monitor2",
-                                    triggerHook: "onLeave",
-                                    duration: "500%",
-                                    triggerHook: 0,
-                                })
-                                .setTween(wipeAnimation2)
-                                .addIndicators({name: "Monitor Content"}) // add indicators (requires plugin)
-                                .addTo(controller);
-
-
-
-
-                            var topMonitor, leftMonitor, widthMonitor;
-                            var scene10 = new ScrollMagic.Scene({
-                                triggerElement: "#triger3_design_monitor",
-                                duration:'550%', 
-                                triggerHook: 0
-                            })
-                                .setPin(".monitor3")
-                                .addIndicators({name: "Launch Monitor"}) // add indicators (requires plugin)
-                                .addTo(controller)
-                                .on("enter leave", function (e) {
-                                    $('.monitor3').addClass(e.type == "leave" && "leave");
-                                    $('.monitor4').addClass(e.type == "leave" && "leave");
-                                    $('.monitor3').removeClass(e.type == "enter" && "leave");
-                                    $('.monitor4').removeClass(e.type == "enter" && "leave");
-                                })
-                                .on("start end", function (e) {
-                                    $('.monitor3').addClass(e.type == "start" && "start");
-                                    $('.monitor4').addClass(e.type == "start" && "start");
-                                    $('.monitor3').removeClass(e.type == "end" && "start");
-                                    $('.monitor4').removeClass(e.type == "end" && "start");
-                                })
-
-                            var scene11 = new ScrollMagic.Scene({
-                                triggerElement: '#trigger3_design_description',
-                                duration: 460,
-                                loglevel: 3,
-                                triggerHook: 0.3,
-                            })
-                                .addIndicators({name: "Launch Description"}) // add indicators (requires plugin)
-                                .addTo(controller)
-                                .on("start end", function (e) {
-                                    $(".content3-description").addClass(e.type == "end" && "fixed");
-                                    $(".content3-description").removeClass(e.type == "start" && "fixed");
-                                })
-                                .on("enter leave", function (e) {
-                                    $(".content3-description").addClass(e.type == "leave" && "outside");
-                                    $(".content3-description").removeClass(e.type == "enter" && "outside");
-                                })
-                                .on("progress", function (e) {
-                                    $(".content3-description").css('bottom',  (-10900 + e.progress.toFixed(3) * 135) + 'px');
-                                });
-                            
-                            // define movement of panels
-                            var wipeAnimation2 = new TimelineMax()
-                                // animate to second panel
-                                .to(".monitor3 #slideContainer", 0.5, {z: -150})		// move back in 3D space
-                                .to(".monitor3 #slideContainer", 1,   {x: "-25%"})	// move in to first panel
-                                .to(".monitor3 #slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
-                                // animate to third panel
-                                .to(".monitor3 #slideContainer", 0.5, {z: -150, delay: 1})
-                                .to(".monitor3 #slideContainer", 1,   {x: "-50%"})
-                                .to(".monitor3 #slideContainer", 0.5, {z: 0})
-                                // animate to forth panel
-                                .to(".monitor3 #slideContainer", 0.5, {z: -150, delay: 1})
-                                .to(".monitor3 #slideContainer", 1,   {x: "-75%"})
-                                .to(".monitor3 #slideContainer", 0.5, {z: 0});
-                            // create scene to pin and link animation
-                            new ScrollMagic.Scene({
-                                    triggerElement: ".monitor3",
-                                    triggerHook: "onLeave",
-                                    duration: "500%",
-                                    triggerHook: 0,
-                                })
-                                .setTween(wipeAnimation2)
-                                .addIndicators({name: "Monitor Content"}) // add indicators (requires plugin)
-                                .addTo(controller);
-
-
-
-
-                            var scene12 = new ScrollMagic.Scene({
-                                triggerElement: "#triger_setHeight",
-                                duration: 5, 
-                                triggerHook: 1
-                            })
-                                .addIndicators({name: "setHeight Monitor"}) // add indicators (requires plugin)
-                                .addTo(controller)
-                                .on("start end", function (e) {
-                                    if (e.type == "start") {
-                                        topMonitor = document.querySelector('.monitor3').getBoundingClientRect().top;
-                                        leftMonitor = document.querySelector('.monitor3').getBoundingClientRect().left;
-                                        widthMonitor = document.querySelector('.monitor3').offsetWidth;
-                                    }
-                                })
-
-                            // build tween
-                            //var tween13 = TweenMax.staggerFromTo(".monitor4", 2, {left: '50%', margin: '0 0 0 -320px'}, {left: 0, margin: 0, ease: Back.easeOut}, 0.15);
-
-                            // build scene
-
-                            var isScrolling;
-
-                            // Listen for scroll events
-                            window.addEventListener('scroll', function ( event ) {
-
-                                // Clear our timeout throughout the scroll
-                                window.clearTimeout( isScrolling );
-
-                                // Set a timeout to run after scrolling ends
-                                isScrolling = setTimeout(function() {
-
-                                    scrollFunction();
-
-                                }, 66);
-
-                            }, false);
-
-                            function scrollFunction() {
-
-                                var scrollTop = $('.content-form').offset().top - $(window).scrollTop();
-                                var percentScrollTopOfWindow = scrollTop / $(window).height() * 100;
-
-                                if (percentScrollTopOfWindow < 30 && scrollTop >= 0) {
-                                        $('html, body').animate({
-                                            scrollTop: $('.content-form').offset().top
-                                        }, 100);
-                                } else if (scrollTop > -150 && scrollTop <= 0) {
-                                    $('html, body').animate({
-                                        scrollTop: $('.content-form').offset().top
-                                    }, 100);
-                                }
-                            }
-
-                            var scene13 = new ScrollMagic.Scene({triggerElement: "#triger_setHeight", triggerHook: 0.3})
-                                .addTo(controller)
-                                .addIndicators({name: "monitor4"}) // add indicators (requires plugin)
-                                .on("enter leave", function (e) {
-                                    $(".monitor4").addClass(e.type == "enter" && "left");
-                                    $(".form").addClass(e.type == "enter" && "top");
-                                    $(".monitor4").removeClass(e.type == "leave" && "left");
-                                    $(".form").removeClass(e.type == "leave" && "top");
-
-                                    if (e.type == "enter") {
-                                        $('.content-navigation__menu').css('opacity', 0);
-                                        $('.content3-description').css('opacity', 0);
-                                    } else if (e.type == "leave") {
-                                        $('.content-navigation__menu').css('opacity', 1);
-                                        $('.content3-description').css('opacity', 1);
-                                    }
-                                })
-
-                                .on("start end", function (e) {
-                                    $(".monitor4").addClass(e.type == "end" && "fixed");
-                                    $(".monitor4").removeClass(e.type == "start" && "fixed");
-                                })
-
-                            var scene14 = new ScrollMagic.Scene({triggerElement: "#triger_setHeight", triggerHook: 0})
-                                .addTo(controller)
-                                .on("enter leave", function (e) {
-                                    $(".monitor4").addClass(e.type == "enter" && "absolute");
-                                    $(".monitor4").removeClass(e.type == "leave" && "absolute");
-                                })
-                                
-                                .on("start end", function (e) {
-                                    $(".monitor4").addClass(e.type == "end" && "fixed");
-                                    $(".monitor4").removeClass(e.type == "start" && "fixed");
-                                })
-                               
-					</script>
-				</div>
-			</section>
-		</div>
-	</body>
+                </div>
+            </section>
+        </div>
+    </body>
 </html>
