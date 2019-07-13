@@ -1,11 +1,12 @@
 @import "normalize.less";
 
-body, html {
+body,
+html {
     font-size: 20px;
 }
 
 body {
-	margin: 0;
+    margin: 0;
     height: 100%;
     width: 100%;
     font-family: Helvetica, Arial, sans-serif;
@@ -22,9 +23,10 @@ header {
     z-index: 1;
     background-color: transparent;
     transition: all .5s ease;
+
     &.scroll {
         background-color: #fff;
-        box-shadow: 0 0 50px 0 rgba(28,15,125,0.05);
+        box-shadow: 0 0 50px 0 rgba(28, 15, 125, 0.05);
     }
 
     .logo {
@@ -32,7 +34,8 @@ header {
         height: auto;
         display: inline-block;
         transition: all .5s ease;
-        & > img {
+
+        &>img {
             width: 100%;
         }
     }
@@ -73,6 +76,7 @@ header {
         height: 100%;
         width: 104%;
         display: none;
+
         &.visible {
             display: block;
         }
@@ -88,9 +92,10 @@ header {
     justify-content: center;
 
     .text-title {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
         color: #8675ff;
-        & > h1 {
+
+        &>h1 {
             margin: 24px 0;
             font-weight: 300;
         }
@@ -98,7 +103,8 @@ header {
 
     .text-description {
         font-size: 1.2rem;
-        & > p {
+
+        &>p {
             line-height: 1.7rem;
             font-weight: 300;
         }
@@ -112,12 +118,14 @@ header {
 
 .ghost {
     display: none;
+
     &.fixed.outside {
         display: block;
         position: static !important;
         visibility: hidden;
     }
-    & > * {
+
+    &>* {
         text-indent: -99999;
         color: transparent;
     }
@@ -125,9 +133,11 @@ header {
 
 .content-navigation {
     &.fixed.outside {
-       position: fixed;
-       top: 0;
-       width: 100%;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
         .content-navigation__menu {
             -webkit-transition: all linear 0.25s;
             -moz-transition: all linear 0.25s;
@@ -136,6 +146,7 @@ header {
             opacity: 1;
         }
     }
+
     .content-navigation__menu {
         padding: 0;
         margin: 68px 0 0 0;
@@ -143,18 +154,22 @@ header {
         display: flex;
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
-        & > .menu__item {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.01));
+
+
+        &>.menu__item {
             padding: 5px;
             text-align: center;
             font-size: 66px;
             opacity: 1;
+
             &.deactive {
                 opacity: .3;
             }
 
             & * {
-                margin: 0;  
-            } 
+                margin: 0;
+            }
         }
     }
 }
@@ -163,6 +178,7 @@ header {
     width: 640px;
     margin: 0 auto;
     padding-top: 220px;
+
     .monitor,
     .monitor2,
     .monitor3 {
@@ -171,20 +187,25 @@ header {
         height: 440px;
         background-color: silver;
         border: 4px solid black;
+
         &.fixed.outside {
             position: fixed;
             top: 232px;
-            & + .monitor_ghost{
+
+            &+.monitor_ghost {
                 background: transparent;
                 width: 640px;
                 height: 448px;
             }
         }
+
         &.hidden {
             display: none;
         }
+
         &.leave {
             display: none;
+
             &.start {
                 display: block;
             }
@@ -197,35 +218,38 @@ header {
             overflow: hidden;
         }
     }
-    
+
     .content,
     .content2,
     .content3 {
         width: 620px;
         height: 440px;
-        background-color: orange; 
+        background-color: orange;
         position: fixed;
         left: 50%;
         margin-left: -307px;
         bottom: -500px;
-            &.content_1 {
-                &.hidden {
-                    display: none;
-                }
+
+        &.content_1 {
+            &.hidden {
+                display: none;
             }
+        }
     }
 
     .content-description,
     .content2-description,
     .content3-description {
         position: absolute;
-        padding-left: 40px; 
+        padding-left: 40px;
         left: 0;
         bottom: -11000px;
+
         &.fixed.outside {
             position: fixed;
             top: 232px;
         }
+
         &.hidden {
             position: absolute;
             top: auto;
@@ -233,10 +257,11 @@ header {
             left: -300px;
             width: 200px;
         }
-        
+
         ul {
             padding: 0;
-            > li {
+
+            >li {
                 margin-bottom: 20px;
                 list-style: none;
             }
@@ -245,16 +270,61 @@ header {
 }
 
 
-.divider {
-    height: 800px;
-    &.divider_s {
-        height: 26px;
-    }
-}
-
 .content-form {
     position: relative;
     height: 764px;
+
+    .monitor4 {
+        z-index: -1;
+        display: none;
+        margin: 0 auto;
+        width: 632px;
+        height: 432px;
+        background-color: silver;
+        border: 4px solid black;
+        position: fixed;
+        bottom: 60px;
+        left: calc(50% - 320px);
+        -webkit-transition: left linear 0.45s;
+        -moz-transition: left linear 0.45s;
+        -o-transition: left linear 0.45s;
+        transition: left linear 0.45s;
+    
+        &.fixed.outside {
+            position: fixed;
+            top: 232px;
+    
+            &+.monitor_ghost {
+                background: transparent;
+                width: 640px;
+                height: 448px;
+            }
+        }
+    
+        &.leave {
+            display: block;
+    
+            &.start {
+                display: none;
+            }
+        }
+    
+        &.left {
+            left: 0;
+            margin-left: 0;
+        }
+    
+        &.absolute {
+            position: absolute;
+        }
+    
+        .monitor__content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
 }
 
 .form {
@@ -269,83 +339,44 @@ header {
     transition: all linear 0.45s;
 }
 
-.monitor4 {
-    z-index: -1;
-    display: none;
-    margin: 0 auto;
-    width: 632px;
-    height: 432px;
-    background-color: silver;
-    border: 4px solid black;
-    position: fixed;
-    bottom: 60px;
-    left: calc(50% - 320px);
-    -webkit-transition: left linear 0.45s;
-    -moz-transition: left linear 0.45s;
-    -o-transition: left linear 0.45s;
-    transition: left linear 0.45s;
-    &.fixed.outside {
-        position: fixed;
-        top: 232px;
-        & + .monitor_ghost{
-            background: transparent;
-            width: 640px;
-            height: 448px;
-        }
-    }
-    &.leave {
-        display: block;
-        &.start {
-            display: none;
-        }
-    }
-    &.left {
-        left: 0;
-        margin-left: 0;
-    }
-    &.absolute {
-        position: absolute;
-    }
-
-    .monitor__content {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
+footer {
+    padding: 48px 12px;
+    background: #f9f1f1;
 }
-
 
 #pinContainer {
     width: 100%;
     height: 100%;
     overflow: hidden;
     -webkit-perspective: 1000;
-            perspective: 1000;
+    perspective: 1000;
 }
+
 #slideContainer {
-    width: 400%; /* to contain 4 panels, each with 100% of window width */
+    width: 400%;
+    /* to contain 4 panels, each with 100% of window width */
     height: 100%;
 }
+
 .panel {
     height: 100%;
-    width: 25%; /* relative to parent -> 25% of 400% = 100% of window width */
+    width: 25%;
+    /* relative to parent -> 25% of 400% = 100% of window width */
     float: left;
+
     &.blue {
         background-color: blue;
     }
+
     &.turqoise {
         background-color: violet;
     }
+
     &.green {
         background-color: green;
     }
+
     &.bordeaux {
         background-color: orange;
     }
-}
-
-footer {
-    padding: 48px 12px;
-    background: #f9f1f1;
 }
