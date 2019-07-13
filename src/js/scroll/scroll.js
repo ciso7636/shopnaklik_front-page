@@ -1,4 +1,5 @@
 const controller = new ScrollMagic.Controller({ loglevel: 3 });
+var bottomPositionDescription, bottomPositionDescription2, bottomPositionDescription3;
 
 class Scroll {
     static scrollHeader() {
@@ -16,6 +17,7 @@ class Scroll {
     }
 
 	static scrollNavigate() {
+		var designHeight = $(window).height() - 190;
 		// build tween
 		var tween = TweenMax.to('.menu__item:nth-child(2), .menu__item:nth-child(3)', 0.5, { opacity: '.1' });
 		var tween2 = TweenMax.to('.menu__item:nth-child(2)', 0.5, { opacity: '1' });
@@ -24,25 +26,24 @@ class Scroll {
 		var tween5 = TweenMax.to('.menu__item:nth-child(2)', 0.5, { opacity: '.1' });
 		// build scene
 		var scene = new ScrollMagic.Scene({
-			triggerElement: '#trigger_Design_Build_Launch',
-			duration: 212,
-			loglevel: 3,
-			triggerHook: 0.5,
+			triggerElement: '#trigger_navigation-design',
+			duration: designHeight,
+			triggerHook: 1,
 		})
 			.setTween(tween)
-			.addIndicators({ name: 'Navigate - Desgin' }) // add indicators (requires plugin)
+			.addIndicators({ name: 'Desgin - Navigate' }) // add indicators (requires plugin)
 			.addTo(controller)
 			.on('start end', function(e) {
-				$('.content-navigation').addClass(e.type == 'end' && 'fixed');
-				$('.content-navigation').removeClass(e.type == 'start' && 'fixed');
+				$('.content-navigation, .content-navigation_ghost').addClass(e.type == 'end' && 'fixed');
+				$('.content-navigation, .content-navigation_ghost').removeClass(e.type == 'start' && 'fixed');
 			})
 			.on('enter leave', function(e) {
-				$('.content-navigation').addClass(e.type == 'leave' && 'outside');
-				$('.content-navigation').removeClass(e.type == 'enter' && 'outside');
+				$('.content-navigation, .content-navigation_ghost').addClass(e.type == 'leave' && 'outside');
+				$('.content-navigation, .content-navigation_ghost').removeClass(e.type == 'enter' && 'outside');
 			});
 
 		var scene2 = new ScrollMagic.Scene({
-			triggerElement: '#trigger2_Design_Build_Launch',
+			triggerElement: '#triger_build_monitorAndDescription',
 			duration: 100,
 			loglevel: 3,
 			triggerHook: 0.5,
@@ -52,7 +53,7 @@ class Scroll {
 			.addTo(controller);
 
 		var scene3 = new ScrollMagic.Scene({
-			triggerElement: '#trigger2_Design_Build_Launch',
+			triggerElement: '#triger_build_monitorAndDescription',
 			duration: 100,
 			loglevel: 3,
 			triggerHook: 0.5,
@@ -62,7 +63,7 @@ class Scroll {
 			.addTo(controller);
 
 		var scene4 = new ScrollMagic.Scene({
-			triggerElement: '#trigger3_Design_Build_Launch',
+			triggerElement: '#triger_launch_monitorAndDescription',
 			duration: 100,
 			loglevel: 3,
 			triggerHook: 0.5,
@@ -72,7 +73,7 @@ class Scroll {
 			.addTo(controller);
 
 		var scene5 = new ScrollMagic.Scene({
-			triggerElement: '#trigger3_Design_Build_Launch',
+			triggerElement: '#triger_launch_monitorAndDescription',
 			duration: 100,
 			loglevel: 3,
 			triggerHook: 0.5,
@@ -83,14 +84,13 @@ class Scroll {
 	}
 
 	static scrollDesignMonitor() {
-		var bottomPositionDescription;
 		var scene6 = new ScrollMagic.Scene({
-			triggerElement: '#triger_design_monitor',
+			triggerElement: '#triger_design_monitorAndDescription',
 			duration: '550%',
 			triggerHook: 0,
 		})
 			.setPin('.monitor')
-			.addIndicators({ name: 'Design Monitor' }) // add indicators (requires plugin)
+			.addIndicators({ name: 'Monitor - Design- - - - - - - - - - - - - - - - - - -' }) // add indicators (requires plugin)
 			.addTo(controller)
 			.on('enter leave', function(e) {
 				if (e.type == 'enter') {
@@ -113,12 +113,10 @@ class Scroll {
 
 	static scrollDesignDescription() {
 		var scene7 = new ScrollMagic.Scene({
-			triggerElement: '#trigger_design_description',
-			duration: 460,
-			loglevel: 3,
-			triggerHook: 0.3,
+			triggerElement: '#triger_design_monitorAndDescription',
+			triggerHook: 1,
 		})
-			.addIndicators({ name: 'Design Description' }) // add indicators (requires plugin)
+			.addIndicators({ name: 'Design - Description' }) // add indicators (requires plugin)
 			.addTo(controller)
 			.on('start end', function(e) {
 				$('.content-description').addClass(e.type == 'end' && 'fixed');
@@ -131,7 +129,7 @@ class Scroll {
 				bottomPositionDescription = $('.content-description').css('bottom');
 			})
 			.on('progress', function(e) {
-				$('.content-description').css('bottom', -1000 + e.progress.toFixed(3) * 135 + 'px');
+				$('.content-description').css('top', ($('.monitor').offset().top + 12) + 'px');
 			});
 	}
 
@@ -163,9 +161,8 @@ class Scroll {
 	}
 
 	static scrollBuildMonitor() {
-		var bottomPositionDescription2;
 		var scene8 = new ScrollMagic.Scene({
-			triggerElement: '#triger2_design_monitor',
+			triggerElement: '#triger_build_monitorAndDescription',
 			duration: '550%',
 			triggerHook: 0,
 		})
@@ -193,10 +190,8 @@ class Scroll {
 
 	static scrollBuildDescription() {
 		var scene9 = new ScrollMagic.Scene({
-			triggerElement: '#trigger2_design_description',
-			duration: 460,
-			loglevel: 3,
-			triggerHook: 0.3,
+			triggerElement: '#triger_build_monitorAndDescription',
+			triggerHook: 1,
 		})
 			.addIndicators({ name: 'Build Description' }) // add indicators (requires plugin)
 			.addTo(controller)
@@ -211,7 +206,7 @@ class Scroll {
 				bottomPositionDescription2 = $('.content2-description').css('bottom');
 			})
 			.on('progress', function(e) {
-				$('.content2-description').css('bottom', -5950 + e.progress.toFixed(3) * 135 + 'px');
+				$('.content2-description').css('top', ($('.monitor2').offset().top + 12) + 'px');
 			});
 	}
 
@@ -244,7 +239,7 @@ class Scroll {
 
 	static scrollLaunchMonitor() {
 		var scene10 = new ScrollMagic.Scene({
-			triggerElement: '#triger3_design_monitor',
+			triggerElement: '#triger_launch_monitorAndDescription',
 			duration: '550%',
 			triggerHook: 0,
 		})
@@ -262,15 +257,30 @@ class Scroll {
 				$('.monitor4').addClass(e.type == 'start' && 'start');
 				$('.monitor3').removeClass(e.type == 'end' && 'start');
 				$('.monitor4').removeClass(e.type == 'end' && 'start');
+			})
+			.on('enter leave', function(e) {
+				if (e.type == 'enter') {
+					$('.container').css('position', 'static');
+					$('.content3-description').css({
+						position: 'fixed',
+						top: '232px',
+						bottom: bottomPositionDescription3,
+					});
+				} else if (e.type == 'leave') {
+					$('.container').css('position', 'static');
+					$('.content3-description').css({
+						position: 'absolute',
+						bottom: 'auto',
+						top: $('.content3-description').offset().top,
+					});
+				}
 			});
 	}
 
 	static scrollLaunchDescription() {
 		var scene11 = new ScrollMagic.Scene({
-			triggerElement: '#trigger3_design_description',
-			duration: 460,
-			loglevel: 3,
-			triggerHook: 0.3,
+			triggerElement: '#triger_launch_monitorAndDescription',
+			triggerHook: 1,
 		})
 			.addIndicators({ name: 'Launch Description' }) // add indicators (requires plugin)
 			.addTo(controller)
@@ -281,9 +291,11 @@ class Scroll {
 			.on('enter leave', function(e) {
 				$('.content3-description').addClass(e.type == 'leave' && 'outside');
 				$('.content3-description').removeClass(e.type == 'enter' && 'outside');
+
+				bottomPositionDescription3 = $('.content3-description').css('bottom');
 			})
 			.on('progress', function(e) {
-				$('.content3-description').css('bottom', -10900 + e.progress.toFixed(3) * 135 + 'px');
+				$('.content3-description').css('top', ($('.monitor3').offset().top + 12) + 'px');
 			});
 	}
 
@@ -311,22 +323,14 @@ class Scroll {
 		})
 			.setTween(wipeAnimation2)
 			.addIndicators({ name: 'Monitor Content' }) // add indicators (requires plugin)
-			.addTo(controller);
-	}
-
-	static scrollLaunchMonitorDuplicate() {
-		var scene12 = new ScrollMagic.Scene({
-			triggerElement: '#triger_setHeight',
-			duration: 5,
-			triggerHook: 1,
-		})
-			.addIndicators({ name: 'setHeight Monitor' }) // add indicators (requires plugin)
 			.addTo(controller)
 			.on('start end', function(e) {
-				if (e.type == 'start') {
-					topMonitor = document.querySelector('.monitor3').getBoundingClientRect().top;
-					leftMonitor = document.querySelector('.monitor3').getBoundingClientRect().left;
-					widthMonitor = document.querySelector('.monitor3').offsetWidth;
+				if (e.type == 'end') {
+					var topMonitor = document.querySelector('.monitor3').getBoundingClientRect().top;
+					var leftMonitor = document.querySelector('.monitor3').getBoundingClientRect().left;
+					var widthMonitor = document.querySelector('.monitor3').offsetWidth;
+
+					$('.monitor4').css('top', topMonitor === 0 ? 220 : topMonitor + 'px');
 				}
 			});
 	}

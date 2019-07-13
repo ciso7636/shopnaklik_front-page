@@ -16,7 +16,6 @@ Scroll.scrollLaunchMonitor();
 Scroll.scrollLaunchDescription();
 Scroll.scrollSliderLaunchMonitor();
 
-Scroll.scrollLaunchMonitorDuplicate();
 Scroll.scrollContentFormAutoTop();
 Scroll.scrollLaunchMonitorDuplicateSlideLeft();
 
