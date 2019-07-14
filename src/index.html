@@ -1,190 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet" />
-        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
 
-        <title>shopnaklik</title>
-    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/jquery.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 
-    <body>
-        <header>
-            <a href="/" class="logo"><img src="/img/logo.png" alt="logo"></a>
-        </header>
-        <div class="container">
-            <section class="section-top">
-                <div class="section-top__text">
-                    <div class="text-title">
-                        <h1>Sell online with Shopnaklik</h1>
-                    </div>
-                    <div class="text-description">
-                        <p>Everything you need to start, run and grow your online store</p>
-                    </div>
-                </div>
-                <div class="section-top__picture">
-                    <figure class="product-figure product-figure--cover">
-                        <img
-                            class="visible"
-                            src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
-                        />
-                    </figure>
-                </div>
-                <svg class="section-top__crop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48">
-                    <path fill="#FFF" fill-rule="evenodd" d="M0 0c194.22 23.31 345.236 37.383 453.045 42.218C539.007 46.073 627.992 48 720 48c265.097 0 505.097-16 720-48v48H0V0z"></path>
-                </svg>
-            </section>
-            
-            <section class="section-middle">
+    <title>shopnaklik</title>
+  </head>
 
-                <div class="content-navigation">
-                    <ul class="content-navigation__menu">
-                        <li class="menu__item"><h2>Design.</h2></li>
-                        <li class="menu__item"><h2>Build.</h2></li>
-                        <li class="menu__item"><h2>Launch.</h2></li>
-                    </ul>
-                </div>
-                <div class="content-navigation ghost">
-                    <ul class="content-navigation__menu">
-                        <li class="menu__item"><h2>Design.</h2></li>
-                        <li class="menu__item"><h2>Build.</h2></li>
-                        <li class="menu__item"><h2>Launch.</h2></li>
-                    </ul>
-                </div>
-                <div id="trigger_navigation-design" class="spacer s0"></div>
-
-                <div class="content-presentation">
-
-                    <div id="triger_design_monitorAndDescription"></div>
-                    <div class="section-middle__content content_1">
-                        <div class="monitor">
-                            <div id="pinContainer">
-                                <div id="slideContainer">
-                                    <section class="panel blue">
-                                        <b>ONE</b>
-                                    </section>
-                                    <section class="panel turqoise">
-                                        <b>TWO</b>
-                                    </section>
-                                    <section class="panel green">
-                                        <b>THREE</b>
-                                    </section>
-                                    <section class="panel bordeaux">
-                                        <b>FOUR</b>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-description">
-                            <h2>Licht terrazzo basis1</h2>
-                            <ul>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="triger_build_monitorAndDescription"></div>
-                    <div class="section-middle__content content_2">
-                        <div class="monitor2">
-                            <div id="pinContainer">
-                                <div id="slideContainer">
-                                    <section class="panel blue">
-                                        <b>ONE</b>
-                                    </section>
-                                    <section class="panel turqoise">
-                                        <b>TWO</b>
-                                    </section>
-                                    <section class="panel green">
-                                        <b>THREE</b>
-                                    </section>
-                                    <section class="panel bordeaux">
-                                        <b>FOUR</b>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content2-description">
-                            <h2>Licht terrazzo basis2</h2>
-                            <ul>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="triger_launch_monitorAndDescription"></div>
-                    <div class="section-middle__content">
-                        <div class="monitor3">
-                            <div id="pinContainer">
-                                <div id="slideContainer">
-                                    <section class="panel blue">
-                                        <b>ONE</b>
-                                    </section>
-                                    <section class="panel turqoise">
-                                        <b>TWO</b>
-                                    </section>
-                                    <section class="panel green">
-                                        <b>THREE</b>
-                                    </section>
-                                    <section class="panel bordeaux">
-                                        <b>FOUR</b>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content3-description">
-                            <h2>Licht terrazzo basis3</h2>
-                            <ul>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                                <li>Licht terrazzo basis met witte blaadjes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id='triger_setHeight'></div>
-                    <div class="content-form">
-                        <div class="monitor4">
-                            <div id="pinContainer">
-                                <div id="slideContainer">
-                                    <section class="panel bordeaux">
-                                        <b>FOUR</b>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form">
-                            <input type='text' name='name' id='name'>
-                            <input type='text2' name='name2' id='name2'>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer>
-                <ul>
-                    <li>
-                        Text
-                    </li>
-                    <li>
-                        Text
-                    </li>
-                    <li>
-                        Text
-                    </li>
-                </ul>
-            </footer>
+  <body>
+    <!-- SIGN UP MODAL -->
+    <div id="modal-signup" class="modal">
+      <div class="modal-content">
+        <h4>Sign up</h4>
+        <br />
+        <form id="signup-form">
+          <div class="input-field">
+            <input type="email" id="signup-email" required />
+            <label for="signup-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="signup-password" required />
+            <label for="signup-password">Choose password</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+      <div class="modal-content">
+        <h4>Login</h4>
+        <br />
+        <form id="login-form">
+          <div class="input-field">
+            <input type="email" id="login-email" required />
+            <label for="login-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="login-password" required />
+            <label for="login-password">Your password</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Login</button>
+        </form>
+      </div>
+    </div>
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal">
+      <div class="modal-content center-align">
+        <h4>Account details</h4>
+        <br />
+        <div class="account-details"></div>
+      </div>
+    </div>
+    <!-- CREATE GUIDE MODAL -->
+    <div id="modal-create" class="modal">
+      <div class="modal-content">
+        <h4>Create Guide</h4>
+        <br />
+        <form id="create-form">
+          <div class="input-field">
+            <input type="text" id="title" required />
+            <label for="title">Guide Title</label>
+          </div>
+          <div class="input-field">
+            <textarea
+              id="content"
+              class="materialize-textarea"
+              required
+            ></textarea>
+            <label for="content">Guide Content</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Create</button>
+        </form>
+      </div>
+    </div>
+    <header>
+      <!-- NAVBAR -->
+      <nav class="z-depth-0 grey lighten-4">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">
+            <img src="/img/logo.png" style="width: 180px; margin-top: 10px;" />
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="logged-in">
+              <a
+                href="#"
+                class="grey-text modal-trigger"
+                data-target="modal-account"
+                >Account</a
+              >
+            </li>
+            <li class="logged-in">
+              <a href="#" class="grey-text" id="logout">Logout</a>
+            </li>
+            <li class="logged-in">
+              <a
+                href="#"
+                class="grey-text modal-trigger"
+                data-target="modal-create"
+                >Create Guide</a
+              >
+            </li>
+            <li class="logged-out">
+              <a
+                href="#"
+                class="grey-text modal-trigger"
+                data-target="modal-login"
+                >Login</a
+              >
+            </li>
+            <li class="logged-out">
+              <a
+                href="#"
+                class="grey-text modal-trigger"
+                data-target="modal-signup"
+                >Sign up</a
+              >
+            </li>
+          </ul>
         </div>
-    </body>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="section-top">
+        <div class="section-top__text">
+          <div class="text-title">
+            <h1>Sell online with Shopnaklik</h1>
+          </div>
+          <div class="text-description">
+            <p>Everything you need to start, run and grow your online store</p>
+          </div>
+        </div>
+        <div class="section-top__picture">
+          <figure class="product-figure product-figure--cover">
+            <img
+              class="visible"
+              src="https://wwwcdn.bigcommerce.com/www1.bigcommerce.com/assets/V4-Asset-1@2x.png"
+            />
+          </figure>
+        </div>
+        <svg
+          class="section-top__crop"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 48"
+        >
+          <path
+            fill="#FFF"
+            fill-rule="evenodd"
+            d="M0 0c194.22 23.31 345.236 37.383 453.045 42.218C539.007 46.073 627.992 48 720 48c265.097 0 505.097-16 720-48v48H0V0z"
+          ></path>
+        </svg>
+      </section>
+
+      <section class="section-middle">
+        <div class="content-navigation">
+          <ul class="content-navigation__menu">
+            <li class="menu__item"><h2>Design.</h2></li>
+            <li class="menu__item"><h2>Build.</h2></li>
+            <li class="menu__item"><h2>Launch.</h2></li>
+          </ul>
+        </div>
+        <div class="content-navigation ghost">
+          <ul class="content-navigation__menu">
+            <li class="menu__item"><h2>Design.</h2></li>
+            <li class="menu__item"><h2>Build.</h2></li>
+            <li class="menu__item"><h2>Launch.</h2></li>
+          </ul>
+        </div>
+        <div id="trigger_navigation-design" class="spacer s0"></div>
+
+        <div class="content-presentation">
+          <div id="triger_design_monitorAndDescription"></div>
+          <div class="section-middle__content content_1">
+            <div class="monitor">
+              <div id="pinContainer">
+                <div id="slideContainer">
+                  <section class="panel blue">
+                    <b>ONE</b>
+                  </section>
+                  <section class="panel turqoise">
+                    <b>TWO</b>
+                  </section>
+                  <section class="panel green">
+                    <b>THREE</b>
+                  </section>
+                  <section class="panel bordeaux">
+                    <b>FOUR</b>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="content-description">
+              <h2>Licht terrazzo basis1</h2>
+              <ul>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="triger_build_monitorAndDescription"></div>
+          <div class="section-middle__content content_2">
+            <div class="monitor2">
+              <div id="pinContainer">
+                <div id="slideContainer">
+                  <section class="panel blue">
+                    <b>ONE</b>
+                  </section>
+                  <section class="panel turqoise">
+                    <b>TWO</b>
+                  </section>
+                  <section class="panel green">
+                    <b>THREE</b>
+                  </section>
+                  <section class="panel bordeaux">
+                    <b>FOUR</b>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="content2-description">
+              <h2>Licht terrazzo basis2</h2>
+              <ul>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="triger_launch_monitorAndDescription"></div>
+          <div class="section-middle__content">
+            <div class="monitor3">
+              <div id="pinContainer">
+                <div id="slideContainer">
+                  <section class="panel blue">
+                    <b>ONE</b>
+                  </section>
+                  <section class="panel turqoise">
+                    <b>TWO</b>
+                  </section>
+                  <section class="panel green">
+                    <b>THREE</b>
+                  </section>
+                  <section class="panel bordeaux">
+                    <b>FOUR</b>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="content3-description">
+              <h2>Licht terrazzo basis3</h2>
+              <ul>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+                <li>Licht terrazzo basis met witte blaadjes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="triger_setHeight"></div>
+          <div class="content-form">
+            <div class="monitor4">
+              <div id="pinContainer">
+                <div id="slideContainer">
+                  <section class="panel bordeaux">
+                    <b>FOUR</b>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="form">
+              <input type="text" name="name" id="name" />
+              <input type="text2" name="name2" id="name2" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <ul>
+          <li>
+            Text
+          </li>
+          <li>
+            Text
+          </li>
+          <li>
+            Text
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDWVHc1FI--jqZOzyS_u8p5NM_Pfipj-2w",
+        authDomain: "shopnaklik-7636.firebaseapp.com",
+        databaseURL: "https://shopnaklik-7636.firebaseio.com",
+        projectId: "shopnaklik-7636",
+        appId: "1:296435362236:web:1cf91e93296ecd79"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      // update firestore settings
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  </body>
 </html>

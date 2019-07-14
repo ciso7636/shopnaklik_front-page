@@ -1,0 +1,360 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+:root {
+    --primary-color: #242222;
+  } /* Site Width */
+  .header-main {
+    height: 82px;
+  }
+  #logo img {
+    max-height: 82px;
+  }
+  #logo {
+    width: 224px;
+  }
+  .header-bottom {
+    min-height: 25px;
+  }
+  .header-top {
+    min-height: 28px;
+  }
+  .transparent .header-main {
+    height: 240px;
+  }
+  .transparent #logo img {
+    max-height: 240px;
+  }
+  .has-transparent + .page-title:first-of-type,
+  .has-transparent + #main > .page-title,
+  .has-transparent + #main > div > .page-title,
+  .has-transparent + #main .page-header-wrapper:first-of-type .page-title {
+    padding-top: 320px;
+  }
+  .header.show-on-scroll,
+  .stuck .header-main {
+    height: 70px !important;
+  }
+  .stuck #logo img {
+    max-height: 70px !important;
+  }
+  .search-form {
+    width: 56%;
+  }
+  .header-bg-color,
+  .header-wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .header-bottom {
+    background-color: #f7f7f7;
+  }
+  .header-main .nav > li > a {
+    line-height: 13px;
+  }
+  .header-bottom-nav > li > a {
+    line-height: 25px;
+  }
+  @media (max-width: 549px) {
+    .header-main {
+      height: 70px;
+    }
+    #logo img {
+      max-height: 70px;
+    }
+  }
+  .header-top {
+    background-color: #fceaea !important;
+  } /* Color */
+  .accordion-title.active,
+  .has-icon-bg .icon .icon-inner,
+  .logo a,
+  .primary.is-underline,
+  .primary.is-link,
+  .badge-outline .badge-inner,
+  .nav-outline > li.active > a,
+  .nav-outline > li.active > a,
+  .cart-icon strong,
+  [data-color="primary"],
+  .is-outline.primary {
+    color: #242222;
+  } /* Color !important */
+  [data-text-color="primary"] {
+    color: #242222 !important;
+  } /* Background Color */
+  [data-text-bg="primary"] {
+    background-color: #242222;
+  } /* Background */
+  .scroll-to-bullets a,
+  .featured-title,
+  .label-new.menu-item > a:after,
+  .nav-pagination > li > .current,
+  .nav-pagination > li > span:hover,
+  .nav-pagination > li > a:hover,
+  .has-hover:hover .badge-outline .badge-inner,
+  button[type="submit"],
+  .button.wc-forward:not(.checkout):not(.checkout-button),
+  .button.submit-button,
+  .button.primary:not(.is-outline),
+  .featured-table .title,
+  .is-outline:hover,
+  .has-icon:hover .icon-label,
+  .nav-dropdown-bold .nav-column li > a:hover,
+  .nav-dropdown.nav-dropdown-bold > li > a:hover,
+  .nav-dropdown-bold.dark .nav-column li > a:hover,
+  .nav-dropdown.nav-dropdown-bold.dark > li > a:hover,
+  .is-outline:hover,
+  .tagcloud a:hover,
+  .grid-tools a,
+  input[type="submit"]:not(.is-form),
+  .box-badge:hover .box-text,
+  input.button.alt,
+  .nav-box > li > a:hover,
+  .nav-box > li.active > a,
+  .nav-pills > li.active > a,
+  .current-dropdown .cart-icon strong,
+  .cart-icon:hover strong,
+  .nav-line-bottom > li > a:before,
+  .nav-line-grow > li > a:before,
+  .nav-line > li > a:before,
+  .banner,
+  .header-top,
+  .slider-nav-circle .flickity-prev-next-button:hover svg,
+  .slider-nav-circle .flickity-prev-next-button:hover .arrow,
+  .primary.is-outline:hover,
+  .button.primary:not(.is-outline),
+  input[type="submit"].primary,
+  input[type="submit"].primary,
+  input[type="reset"].button,
+  input[type="button"].primary,
+  .badge-inner {
+    background-color: #242222;
+  } /* Border */
+  .nav-vertical.nav-tabs > li.active > a,
+  .scroll-to-bullets a.active,
+  .nav-pagination > li > .current,
+  .nav-pagination > li > span:hover,
+  .nav-pagination > li > a:hover,
+  .has-hover:hover .badge-outline .badge-inner,
+  .accordion-title.active,
+  .featured-table,
+  .is-outline:hover,
+  .tagcloud a:hover,
+  blockquote,
+  .has-border,
+  .cart-icon strong:after,
+  .cart-icon strong,
+  .blockUI:before,
+  .processing:before,
+  .loading-spin,
+  .slider-nav-circle .flickity-prev-next-button:hover svg,
+  .slider-nav-circle .flickity-prev-next-button:hover .arrow,
+  .primary.is-outline:hover {
+    border-color: #242222;
+  }
+  .nav-tabs > li.active > a {
+    border-top-color: #242222;
+  }
+  .widget_shopping_cart_content .blockUI.blockOverlay:before {
+    border-left-color: #242222;
+  }
+  .woocommerce-checkout-review-order .blockUI.blockOverlay:before {
+    border-left-color: #242222;
+  } /* Fill */
+  .slider .flickity-prev-next-button:hover svg,
+  .slider .flickity-prev-next-button:hover .arrow {
+    fill: #242222;
+  }
+  body {
+    font-size: 100%;
+  }
+  @media screen and (max-width: 549px) {
+    body {
+      font-size: 100%;
+    }
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  body {
+    font-weight: 0;
+  }
+  body {
+    color: #3d3c3c;
+  }
+  .nav > li > a {
+    font-family: "Oxygen", sans-serif;
+  }
+  .nav > li > a {
+    font-weight: 300;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .heading-font,
+  .off-canvas-center .nav-sidebar.nav-vertical > li > a {
+    font-family: "Roboto", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .heading-font,
+  .banner h1,
+  .banner h2 {
+    font-weight: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .heading-font {
+    color: #212020;
+  }
+  .alt-font {
+    font-family: "Dancing Script", sans-serif;
+  }
+  .alt-font {
+    font-weight: 400 !important;
+  }
+  .header:not(.transparent) .header-nav.nav > li > a {
+    color: #0a0a0a;
+  }
+  .header:not(.transparent) .header-bottom-nav.nav > li > a {
+    color: #0a0a0a;
+  }
+  .header:not(.transparent) .header-bottom-nav.nav > li > a:hover,
+  .header:not(.transparent) .header-bottom-nav.nav > li.active > a,
+  .header:not(.transparent) .header-bottom-nav.nav > li.current > a,
+  .header:not(.transparent) .header-bottom-nav.nav > li > a.active,
+  .header:not(.transparent) .header-bottom-nav.nav > li > a.current {
+    color: #5b5b5b;
+  }
+  .header-bottom-nav.nav-line-bottom > li > a:before,
+  .header-bottom-nav.nav-line-grow > li > a:before,
+  .header-bottom-nav.nav-line > li > a:before,
+  .header-bottom-nav.nav-box > li > a:hover,
+  .header-bottom-nav.nav-box > li.active > a,
+  .header-bottom-nav.nav-pills > li > a:hover,
+  .header-bottom-nav.nav-pills > li.active > a {
+    color: #fff !important;
+    background-color: #5b5b5b;
+  }
+  a {
+    color: #3d3c3c;
+  }
+  a:hover {
+    color: #757575;
+  }
+  .tagcloud a:hover {
+    border-color: #757575;
+    background-color: #757575;
+  }
+  @media screen and (min-width: 550px) {
+    .products .box-vertical .box-image {
+      min-width: 247px !important;
+      width: 247px !important;
+    }
+  }
+  .footer-2 {
+    background-color: #f2f2f2;
+  }
+  .absolute-footer,
+  html {
+    background-color: #111111;
+  } /* Custom CSS */
+  .nav > li > a {
+    font-weight: 400 !important;
+  }
+  @media (max-width: 849px) {
+    #wpadminbar {
+      display: none !important;
+    }
+    html {
+      margin-top: 0 !important;
+    }
+  }
+  @media (min-width: 850px) {
+    .mfp-content,
+    .stuck,
+    button.mfp-close {
+      top: 32px !important;
+    }
+    .is-full-height {
+      height: calc(100vh - 32px) !important;
+    }
+  }
+  .xdebug-var-dump {
+    z-index: 999999;
+  }
+  .shortcode-error {
+    border: 2px dashed #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #71cedf;
+  }
+  .custom-product-page .shortcode-error {
+    padding: 15% 10%;
+    text-align: center;
+  }
+  .edit-block-wrapper {
+    position: relative;
+  }
+  .edit-block-button {
+    font-size: 12px !important;
+    background-color: #555 !important;
+    margin: 6px 2px 3px 0px !important;
+    border-radius: 4px !important;
+  }
+  .edit-block-button-builder {
+    background-color: #00a0d2 !important;
+  }
+  .label-new.menu-item > a:after {
+    content: "New";
+  }
+  .label-hot.menu-item > a:after {
+    content: "Hot";
+  }
+  .label-sale.menu-item > a:after {
+    content: "Sale";
+  }
+  .label-popular.menu-item > a:after {
+    content: "Popular";
+  }
+</style>
+<style type="text/css" id="wp-custom-css">
+  .header-nav li.search-form:last-child {
+    margin: auto !important;
+  }
+
+  .footer .col:last-child {
+    background-color: #ebebeb;
+    margin-bottom: 0;
+  }
+
+  .footer .col {
+    padding: 30px 20px;
+  }
+
+  .footer {
+    padding: 0;
+  }
+
+@media only screen and (max-width: 48em) {
+    /*************** ADD MOBILE ONLY CSS HERE  ***************/
+    
+    
+    }
